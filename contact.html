@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact VibeLine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0f0f0f',
+                            accent: '#00ff9d',
+                            purple: '#7000ff',
+                            gray: '#1a1a1a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-3xl font-bold tracking-wider text-white">VIBE<span
+                            class="text-brand-accent">LINE</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="shop.html"
+                            class="hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Shop</a>
+                        <a href="about.html"
+                            class="hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="contact.html"
+                            class="text-brand-accent px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="menu-btn" class="md:hidden text-white hover:text-brand-accent focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 transition-opacity duration-300 opacity-0 pointer-events-none">
+        <button id="close-menu" class="absolute top-6 right-6 text-white hover:text-brand-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="index.html" class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">Home</a>
+        <a href="shop.html" class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">Shop</a>
+        <a href="about.html" class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">About</a>
+        <a href="contact.html"
+            class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">Contact</a>
+    </div>
+
+    <!-- Header -->
+    <div class="grid grid-cols-1 md:grid-cols-2 h-screen">
+        <!-- Contact Form Side -->
+        <div class="flex items-center justify-center bg-brand-black p-8 md:p-16">
+            <div class="w-full max-w-lg space-y-8">
+                <div>
+                    <h1 class="text-4xl font-bold mb-2">GET IN <span class="text-brand-accent">TOUCH</span></h1>
+                    <p class="text-gray-400">Questions about your order or just want to vibe? Hit us up.</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Name</label>
+                        <input type="text"
+                            class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors"
+                            placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                        <input type="email"
+                            class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors"
+                            placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Message</label>
+                        <textarea rows="4"
+                            class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors"
+                            placeholder="What's on your mind?"></textarea>
+                    </div>
+                    <button type="button"
+                        class="w-full bg-brand-accent text-brand-black font-bold py-3 px-4 rounded-lg hover:bg-white hover:scale-[1.02] transition-all transform duration-200">
+                        SEND MESSAGE
+                    </button>
+                </form>
+
+                <div class="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-gray-800">
+                    <div>
+                        <h4 class="text-white font-bold mb-1">Email Us</h4>
+                        <p class="text-gray-400 text-sm">hello@vibeline.lk</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-1">Call Us</h4>
+                        <p class="text-gray-400 text-sm">+94 77 123 4567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Side (Hidden on mobile maybe, or just stacked) -->
+        <div class="hidden md:block relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-transparent to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=1200&auto=format&fit=crop"
+                class="w-full h-full object-cover" alt="Fashion Contact">
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | VibeLine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0f0f0f',
+                            accent: '#00ff9d',
+                            purple: '#7000ff',
+                            gray: '#1a1a1a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-3xl font-bold tracking-wider text-white">VIBE<span
+                            class="text-brand-accent">LINE</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="shop.html"
+                            class="hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Shop</a>
+                        <a href="about.html"
+                            class="text-brand-accent px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="contact.html"
+                            class="hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="menu-btn" class="md:hidden text-white hover:text-brand-accent focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 transition-opacity duration-300 opacity-0 pointer-events-none">
+        <button id="close-menu" class="absolute top-6 right-6 text-white hover:text-brand-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="index.html" class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">Home</a>
+        <a href="shop.html" class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">Shop</a>
+        <a href="about.html" class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">About</a>
+        <a href="contact.html"
+            class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">Contact</a>
+    </div>
+
+    <!-- Header -->
+    <div class="relative py-32 text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2000&auto=format&fit=crop"
+                class="w-full h-full object-cover opacity-20 filter grayscale">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">OUR <span class="text-brand-accent">STORY</span></h1>
+            <p class="text-xl text-gray-300 font-light">Born in the streets. Raised by culture.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-white">More Than Just Fabric</h2>
+                <p class="text-gray-400 leading-relaxed">
+                    VibeLine wasn't started in a boardroom. It started in a garage with a single vision: to create
+                    streetwear that speaks the language of the youth. We believe that what you wear is an extension of
+                    your soul.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    Our designs are inspired by the chaotic beauty of city life, the pulsing neon lights of the night,
+                    and the silent confidence of those who dare to stand out. Every stitch, every print, and every cut
+                    is designed to make you feel "Supiri".
+                </p>
+                <div class="pt-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="h-1 w-12 bg-brand-purple"></div>
+                        <span class="text-white font-bold tracking-widest uppercase">Premium Quality</span>
+                    </div>
+                    <div class="flex items-center space-x-4 mt-2">
+                        <div class="h-1 w-12 bg-brand-accent"></div>
+                        <span class="text-white font-bold tracking-widest uppercase">Limited Drops</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div
+                    class="absolute -inset-4 bg-gradient-to-r from-brand-purple to-brand-accent rounded-lg opacity-30 blur-lg">
+                </div>
+                <img src="https://images.unsplash.com/photo-1549057446-9f5c6ac91a04?q=80&w=800&auto=format&fit=crop"
+                    alt="Fashion Shoot"
+                    class="relative rounded-lg shadow-2xl skew-y-3 transform transition-transform hover:skew-y-0 duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="bg-brand-gray py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-brand-accent mb-2">2024</div>
+                    <div class="text-gray-400 uppercase text-sm tracking-wider">Founded</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-white mb-2">50+</div>
+                    <div class="text-gray-400 uppercase text-sm tracking-wider">Unique Designs</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-brand-purple mb-2">10k+</div>
+                    <div class="text-gray-400 uppercase text-sm tracking-wider">Happy Customers</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-white mb-2">100%</div>
+                    <div class="text-gray-400 uppercase text-sm tracking-wider">Authentic Vibe</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-gray border-t border-gray-800 py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            &copy; 2026 VibeLine. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

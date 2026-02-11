@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Collection | VibeLine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0f0f0f',
+                            accent: '#00ff9d',
+                            purple: '#7000ff',
+                            gray: '#1a1a1a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-3xl font-bold tracking-wider text-white">VIBE<span
+                            class="text-brand-accent">LINE</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="shop.html" class="text-brand-accent px-3 py-2 rounded-md text-sm font-medium">Shop</a>
+                        <a href="about.html"
+                            class="hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="contact.html"
+                            class="hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                    <!-- Mobile menu button -->
+                    <button id="menu-btn" class="md:hidden text-white hover:text-brand-accent focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 transition-opacity duration-300 opacity-0 pointer-events-none">
+        <button id="close-menu" class="absolute top-6 right-6 text-white hover:text-brand-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="index.html" class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">Home</a>
+        <a href="shop.html" class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">Shop</a>
+        <a href="about.html" class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">About</a>
+        <a href="contact.html"
+            class="text-3xl font-bold hover:text-brand-accent text-white transition-colors">Contact</a>
+    </div>
+
+    <!-- Header -->
+    <div class="pt-32 pb-12 text-center bg-gradient-to-b from-brand-gray to-brand-black">
+        <h1 class="text-5xl font-bold mb-4">ALL <span class="text-brand-accent">DROPS</span></h1>
+        <p class="text-gray-400">Exclusive streetwear collections. Limited stock.</p>
+    </div>
+
+    <!-- Filters & Sort -->
+    <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 flex justify-between items-center border-b border-gray-800 pb-4">
+        <div class="flex space-x-4">
+            <button class="text-white font-bold border-b-2 border-brand-accent pb-1">All</button>
+            <button class="text-gray-400 hover:text-white transition-colors">T-Shirts</button>
+            <button class="text-gray-400 hover:text-white transition-colors">Hoodies</button>
+            <button class="text-gray-400 hover:text-white transition-colors">Accessories</button>
+        </div>
+        <div class="text-sm text-gray-400">
+            Showing 6 results
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Product Card 1 -->
+            <div
+                class="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300 hover:shadow-[0_0_20px_rgba(112,0,255,0.3)]">
+                <div class="aspect-w-3 aspect-h-4 bg-gray-800 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=800&auto=format&fit=crop"
+                        class="w-full h-96 object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                        alt="Tee">
+                    <div
+                        class="absolute top-4 right-4 bg-brand-accent text-brand-black font-bold px-3 py-1 text-xs rounded-full">
+                        NEW</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold">Acid Wash Oversize</h3>
+                    <div class="flex justify-between items-end mt-2">
+                        <span class="text-gray-400 text-sm">Heavyweight Cotton</span>
+                        <span class="text-xl font-bold text-brand-accent">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div
+                class="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,157,0.3)]">
+                <div class="aspect-w-3 aspect-h-4 bg-gray-800 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=800&auto=format&fit=crop"
+                        class="w-full h-96 object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                        alt="Tee">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold">Neon Glitch Tee</h3>
+                    <div class="flex justify-between items-end mt-2">
+                        <span class="text-gray-400 text-sm">Graphic Print</span>
+                        <span class="text-xl font-bold text-brand-accent">$45.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div
+                class="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300 hover:shadow-[0_0_20px_rgba(112,0,255,0.3)]">
+                <div class="aspect-w-3 aspect-h-4 bg-gray-800 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop"
+                        class="w-full h-96 object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                        alt="Tee">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold">Core White Tee</h3>
+                    <div class="flex justify-between items-end mt-2">
+                        <span class="text-gray-400 text-sm">Basic Essential</span>
+                        <span class="text-xl font-bold text-brand-accent">$35.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div
+                class="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300 hover:shadow-[0_0_20px_rgba(112,0,255,0.3)]">
+                <div class="aspect-w-3 aspect-h-4 bg-gray-800 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?q=80&w=800&auto=format&fit=crop"
+                        class="w-full h-96 object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                        alt="Tee">
+                    <div
+                        class="absolute top-4 right-4 bg-brand-purple text-white font-bold px-3 py-1 text-xs rounded-full">
+                        RESTOCKED</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold">Urban Walker Hoodie</h3>
+                    <div class="flex justify-between items-end mt-2">
+                        <span class="text-gray-400 text-sm">Fleece Lined</span>
+                        <span class="text-xl font-bold text-brand-accent">$65.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div
+                class="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,157,0.3)]">
+                <div class="aspect-w-3 aspect-h-4 bg-gray-800 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=800&auto=format&fit=crop"
+                        class="w-full h-96 object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                        alt="Tee">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold">VibeLine Cap</h3>
+                    <div class="flex justify-between items-end mt-2">
+                        <span class="text-gray-400 text-sm">One Size</span>
+                        <span class="text-xl font-bold text-brand-accent">$25.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div
+                class="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300 hover:shadow-[0_0_20px_rgba(112,0,255,0.3)]">
+                <div class="aspect-w-3 aspect-h-4 bg-gray-800 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800&auto=format&fit=crop"
+                        class="w-full h-96 object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                        alt="Tee">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-bold">Plain Black Tee</h3>
+                    <div class="flex justify-between items-end mt-2">
+                        <span class="text-gray-400 text-sm">Essential</span>
+                        <span class="text-xl font-bold text-brand-accent">$29.00</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-gray border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            &copy; 2026 VibeLine. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
